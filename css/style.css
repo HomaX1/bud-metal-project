@@ -33,3 +33,9 @@
     url('/fonts/openSansLight/OpenSans-Light.ttf') format('truetype'),
     url('/fonts/openSansLight/OpenSans-Light.svg#webfont') format('svg');
 }
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
