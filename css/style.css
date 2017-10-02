@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Cuprum';
+    font-family: 'Cuprum', sans-serif;
     src: url('/fonts/cuprum/Cuprum-Bold.eot');
     src: url('/fonts/cuprum/Cuprum-Bold.eot?iefix') format('eot'),
     url('/fonts/cuprum/Cuprum-Bold.woff') format('woff'),
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSans-Bold';
+    font-family: 'OpenSans-Bold', sans-serif;
     src: url('/fonts/openSansBold/OpenSans-Bold.eot');
     src: url('/fonts/openSansBold/OpenSans-Bold.eot?iefix') format('eot'),
     url('/fonts/openSansBold/OpenSans-Bold.woff') format('woff'),
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSansCondensed';
+    font-family: 'OpenSansCondensed', sans-serif;
     src: url('/fonts/openSansCondensed/OpenSansCondensed-Light.eot');
     src: url('/fonts/openSansCondensed/OpenSansCondensed-Light.eot?iefix') format('eot'),
     url('/fonts/openSansCondensed/OpenSansCondensed-Light.woff') format('woff'),
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSans-Light';
+    font-family: 'OpenSans-Light', sans-serif;
     src: url('/fonts/openSansLight/OpenSans-Light.eot');
     src: url('/fonts/openSansLight/OpenSans-Light.eot?iefix') format('eot'),
     url('/fonts/openSansLight/OpenSans-Light.woff') format('woff'),
@@ -34,8 +34,122 @@
     url('/fonts/openSansLight/OpenSans-Light.svg#webfont') format('svg');
 }
 
+/*width = 1170px*/
 
 body {
     margin: 0;
     padding: 0;
+    background: url("../img/background.png") repeat;
 }
+
+.header {
+    width: 100%;
+    height: 423px;
+    background: url("../img/one-bridge.png") 70% 100% no-repeat;
+    background-size: contain;
+    margin-top: 10px;
+    position: relative;
+}
+
+.header-wrap {
+    /*width: 1170px;*/
+    height: 100%;
+}
+
+.header-wrap h1 {
+    text-transform: uppercase;
+    width: 677px;
+    font: 50px "Cuprum";
+    color: #000;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
+.logo, .location, .bell {
+    display: inline-block;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo__img {
+    width: 264px;
+    height: 128px;
+    display: inline-block;
+    background-image: url("../img/logo.png");
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.logo p {
+    text-transform: uppercase;
+    font: 21px "OpenSansCondensed";
+    color: #c3c3c3;
+    margin-top: 0;
+}
+
+.location {
+    padding-left: 30px;
+}
+
+.location__icon {
+    width: 53px;
+    height: 84px;
+    display: inline-block;
+    background-image: url("../img/location.png");
+    margin-top: 25px;
+}
+
+.location span {
+    display: inline-block;
+    width: 155px;
+    font: 21px "OpenSans-Light";
+    color: #000;
+    margin-left: 15px;
+    margin-bottom: 55px;
+    vertical-align: middle;
+}
+
+.bell-icon {
+    display: inline-block;
+    width: 60px;
+    height: 146px;
+    background-image: url("../img/call-box.png");
+}
+
+.call {
+    text-align: center;
+}
+
+.call a, .call button {
+    display: block;
+}
+
+.call a {
+    font: 36px "Cuprum";
+    color: #000;
+    margin-top: 31px;
+}
+
+.call button {
+    text-transform: uppercase;
+    font: 21px "OpenSans-Light";
+    color: #fff;
+    background-color: #e72323;
+    border: none;
+    padding: 12px 35px;
+    margin: 25px auto 0;
+}
+
+
+/*@media (min-width: 1200px) {
+    .header {
+        background: url("../img/bridges.png");
+    }
+}*/
+
+
+
+
