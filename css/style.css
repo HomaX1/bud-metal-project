@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum';
     src: url('/fonts/cuprum/Cuprum-Bold.eot');
     src: url('/fonts/cuprum/Cuprum-Bold.eot?iefix') format('eot'),
     url('/fonts/cuprum/Cuprum-Bold.woff') format('woff'),
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSans-Bold', sans-serif;
+    font-family: 'OpenSans-Bold';
     src: url('/fonts/openSansBold/OpenSans-Bold.eot');
     src: url('/fonts/openSansBold/OpenSans-Bold.eot?iefix') format('eot'),
     url('/fonts/openSansBold/OpenSans-Bold.woff') format('woff'),
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSansCondensed', sans-serif;
+    font-family: 'OpenSansCondensed';
     src: url('/fonts/openSansCondensed/OpenSansCondensed-Light.eot');
     src: url('/fonts/openSansCondensed/OpenSansCondensed-Light.eot?iefix') format('eot'),
     url('/fonts/openSansCondensed/OpenSansCondensed-Light.woff') format('woff'),
@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: 'OpenSans-Light', sans-serif;
+    font-family: 'OpenSans-Light';
     src: url('/fonts/openSansLight/OpenSans-Light.eot');
     src: url('/fonts/openSansLight/OpenSans-Light.eot?iefix') format('eot'),
     url('/fonts/openSansLight/OpenSans-Light.woff') format('woff'),
@@ -52,7 +52,7 @@ body {
 }
 
 .header-wrap {
-    /*width: 1170px;*/
+    width: 1170px;
     height: 100%;
 }
 
