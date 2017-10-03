@@ -34,8 +34,6 @@
     url('/fonts/openSansLight/OpenSans-Light.svg#webfont') format('svg');
 }
 
-/*width = 1170px*/
-
 body {
     margin: 0;
     padding: 0;
@@ -97,11 +95,12 @@ body {
     width: 53px;
     height: 84px;
     display: inline-block;
-    background-image: url("../img/location.png");
+    background: url("../img/sprite.png") 0 0;
     margin-top: 25px;
 }
 
 .location span {
+    text-align: left;
     display: inline-block;
     width: 155px;
     font: 21px "OpenSans-Light";
@@ -111,11 +110,16 @@ body {
     vertical-align: middle;
 }
 
+.bell {
+    overflow: hidden;
+}
+
 .bell-icon {
     display: inline-block;
     width: 60px;
     height: 146px;
-    background-image: url("../img/call-box.png");
+    background: url("../img/sprite.png") 0 -101px;
+    float: left;
 }
 
 .call {
@@ -139,14 +143,101 @@ body {
     background-color: #e72323;
     border: none;
     padding: 12px 35px;
-    margin: 25px auto 0;
+    margin: 22px auto 0;
 }
 
+.main-info {
+    margin-top: 35px;
+}
 
-/*@media (min-width: 1200px) {
-    .header {
-        background: url("../img/bridges.png");
-    }
+.list-nav {
+    padding-right: 0;
+}
+
+.list-nav li {
+    list-style-type: none;
+}
+
+.list-nav li::before {
+    display: inline-block;
+    width: 12px;
+    height: 17px;
+    content: "";
+    background: url("../img/sprite.png") 0 -272px no-repeat;
+}
+
+.list-nav li:hover.item-nav::before, .list-nav li:active.item-nav::before {
+    background: url("../img/sprite.png") 0 -323px no-repeat;
+}
+
+.list-nav li:hover.item-nav a, .list-nav li:active.item-nav a {
+    color: #000;
+    border-bottom: 1px dotted #000;
+}
+
+.hover-active-img {
+    display: inline-block;
+    width: 12px;
+    height: 17px;
+    content: "";
+    background: url("../img/sprite.png") 0 -323px no-repeat;
+}
+
+.hover-active-text {
+    color: #000;
+    border-bottom: 1px dotted #000;
+}
+
+.item-nav a {
+    text-decoration: none;
+    font: 24px "OpenSansCondensed";
+    color: #666;
+    margin-left: 18px;
+}
+
+.splash-screen {
+    text-align: center;
+    display: inline-block;
+    padding: 0 0 7px 7px
+}
+
+.splash-screen img {
+    width: 100%;
+    position: relative;
+}
+
+.splash-screen:hover.splash-screen {
+    background-color: #666666;
+    /*background: rgba(255,255,255, 0.7);*/
+    z-index: 2;
+}
+
+.splash-screen img:hover.splash-screen p {
+    background-color: #e72323;
+}
+
+.splash-screen p {
+    width: 97.3%;
+    font: 21px "OpenSansCondensed";
+    color: #fff;
+    background: rgba(0,0,0, 0.7);
+    position: absolute;
+    z-index: 2;
+    bottom: 7px;
+    margin: 0;
+    padding-bottom: 5px;
+
+}
+
+.splash-screen p::after {
+    content: "";
+    border-bottom: 1px solid #fff;
+    display: block;
+    padding-top: 5px;
+}
+
+/*@media (max-width: 1199px) {
+
 }*/
 
 
