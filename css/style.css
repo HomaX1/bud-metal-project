@@ -34,6 +34,7 @@
     url('/fonts/openSansLight/OpenSans-Light.svg#webfont') format('svg');
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -198,25 +199,32 @@ body {
 .splash-screen {
     text-align: center;
     display: inline-block;
-    padding: 0 0 7px 7px
+    padding: 0 0 7px 7px;
+    position: relative;
 }
 
 .splash-screen img {
     width: 100%;
-    position: relative;
 }
 
-.splash-screen:hover.splash-screen {
-    background-color: #666666;
-    /*background: rgba(255,255,255, 0.7);*/
-    z-index: 2;
+.splash-screen__background {
+    width: 97.5%;
+    height: 96.5%;
+    position: absolute;
+    transition: background 0.2s;
 }
 
-.splash-screen img:hover.splash-screen p {
-    background-color: #e72323;
+.splash-screen:hover .splash-screen__background, .splash-screen:active .splash-screen__background{
+    background: rgba(255,255,255, 0.7);
+}
+
+.splash-screen:hover p, .splash-screen:active p {
+    background: rgb(231,35,35);
+    bottom: 65px;
 }
 
 .splash-screen p {
+    text-decoration: none;
     width: 97.3%;
     font: 21px "OpenSansCondensed";
     color: #fff;
@@ -226,6 +234,7 @@ body {
     bottom: 7px;
     margin: 0;
     padding-bottom: 5px;
+    transition: background 0.2s, bottom 0.2s;
 
 }
 
@@ -235,6 +244,8 @@ body {
     display: block;
     padding-top: 5px;
 }
+
+
 
 /*@media (max-width: 1199px) {
 
