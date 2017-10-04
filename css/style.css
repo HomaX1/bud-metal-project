@@ -90,6 +90,7 @@ body {
 
 .location {
     padding-left: 30px;
+    overflow: hidden;
 }
 
 .location__icon {
@@ -98,17 +99,21 @@ body {
     display: inline-block;
     background: url("../img/sprite.png") 0 0;
     margin-top: 25px;
+    float: right;
 }
 
-.location span {
+.location-adress {
+    float: right;
+    margin-top: 35px;
+}
+
+.location-adress span {
     text-align: left;
-    display: inline-block;
+    display: block;
     width: 155px;
     font: 21px "OpenSans-Light";
     color: #000;
     margin-left: 15px;
-    margin-bottom: 55px;
-    vertical-align: middle;
 }
 
 .bell {
@@ -125,6 +130,8 @@ body {
 
 .call {
     text-align: center;
+    float: left;
+    margin-left: 25px;
 }
 
 .call a, .call button {
@@ -135,6 +142,11 @@ body {
     font: 36px "Cuprum";
     color: #000;
     margin-top: 31px;
+    text-decoration: none;
+}
+
+.call a:hover {
+    color: #ccc;
 }
 
 .call button {
@@ -147,8 +159,13 @@ body {
     margin: 22px auto 0;
 }
 
+.call button:focus {
+    outline: none;
+}
+
 .main-info {
     margin-top: 35px;
+    border-bottom: 13px solid #000;
 }
 
 .list-nav {
@@ -245,7 +262,175 @@ body {
     padding-top: 5px;
 }
 
+.info {
+    width: 1170px;
+    margin: 60px auto 0;
+    padding: 0 15px;
+}
 
+.heading__square {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url("../img/sprite.png") 0 -361px;
+}
+
+.heading h2 {
+    display: inline-block;
+    text-transform: uppercase;
+    font: 30px "OpenSans-Bold";
+    color: #000;
+    margin: 0 15px 40px;
+}
+
+.main-text {
+    margin-bottom: 60px;
+}
+
+.main-text p {
+    font: 18px "OpenSans-Light";
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.info h3 {
+    font: 24px "OpenSans-Bold";
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.info h3 span {
+    border-bottom: 5px solid #000;
+}
+
+.info-list {
+    margin-bottom: 40px;
+}
+
+.info-list__item {
+    list-style-type: none;
+    font: 18px "OpenSans-Light";
+    color: #666;
+}
+
+.info-list__item::before {
+    display: inline-block;
+    width: 29px;
+    height: 17px;
+    content: "";
+    background: url("../img/sprite.png") 0 -407px no-repeat;
+    margin-right: 10px;
+}
+
+.main-text p span {
+    font-weight: bold;
+}
+
+.main-text p a {
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #e72323;
+}
+
+.main-text p a:hover {
+    color: #000;
+}
+
+.footer {
+    background: rgba(0,0,0,0.7);
+}
+
+.footer-wrap {
+    height: 100px;
+}
+
+.footer-location, .footer-bell {
+    overflow: hidden;
+}
+
+.footer-location {
+    margin-top: 12px;
+}
+
+.footer-bell {
+    margin-top: 5px;
+    height: 88px;
+}
+
+.footer-location__icon {
+    display: inline-block;
+    width: 48px;
+    height: 75px;
+    background: url("../img/sprite.png") -2px -447px;
+    float: left;
+    margin-right: 18px;
+}
+
+.footer-location-adress {
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 82px;
+    margin: auto;
+    height: 66px;
+}
+
+.footer-location-adress span {
+    display: block;
+    font: 16px "OpenSans-Light";
+    color: #ccc;
+}
+
+.footer-bell__icon {
+    display: inline-block;
+    width: 36px;
+    height: 88px;
+    background: url("../img/sprite.png") -7px -539px;
+    float: left;
+    margin-right: 18px;
+}
+
+.phone-number {
+    float: left;
+    position: absolute;
+    left: 66px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 66px;
+}
+
+.footer-bell-tel {
+    font: 16px "OpenSans-Light";
+    color: #ccc;
+}
+
+.footer-bell-tel a {
+    text-decoration: none;
+    font: 16px "OpenSans-Light";
+    color: #ccc;
+}
+
+.footer-bell-tel a:hover {
+    color: #000;
+}
+
+.footer-nav {
+    font: 18px "OpenSansCondensed";
+    color: #ccc;
+    line-height: 100px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    font: 18px "OpenSansCondensed";
+    color: #ccc;
+}
+
+.footer-nav a:hover {
+    color: #000;
+}
 
 /*@media (max-width: 1199px) {
 
