@@ -45,22 +45,25 @@ body {
     width: 100%;
     height: 423px;
     background: url("../img/bridges.png") top center no-repeat;
-    margin-top: 10px;
+    padding-top: 10px;
     position: relative;
 }
 
 .header-wrap {
     width: 1170px;
     height: 100%;
+    margin: 0 auto;
 }
 
-.header-wrap h1 {
-    text-transform: uppercase;
-    width: 677px;
-    font: 50px "Cuprum";
-    color: #000;
+.heading-wrap {
     position: absolute;
     bottom: 0;
+}
+
+.header-heading h1 {
+    text-transform: uppercase;
+    font: 50px "Cuprum";
+    color: #000;
     margin: 0;
 }
 
@@ -78,14 +81,13 @@ body {
     display: inline-block;
     background-image: url("../img/logo.png");
     margin-top: 15px;
-    margin-bottom: 10px;
 }
 
 .logo p {
     text-transform: uppercase;
     font: 21px "OpenSansCondensed";
     color: #c3c3c3;
-    margin-top: 0;
+    margin-top: -8px;
 }
 
 .location {
@@ -359,7 +361,7 @@ body {
 
 .footer-location__icon {
     display: inline-block;
-    width: 48px;
+    width: 50px;
     height: 75px;
     background: url("../img/sprite.png") -2px -447px;
     float: left;
@@ -432,9 +434,198 @@ body {
     color: #000;
 }
 
-/*@media (max-width: 1199px) {
 
-}*/
+@media (max-width: 1199px) {
+    .header {
+        background: url(../img/one-bridge.png) bottom center no-repeat;
+        height: 450px;
+    }
+
+    .header-wrap {
+        width: 970px;
+    }
+
+    .call a {
+        font-size: 33px;
+    }
+
+    .call button {
+        padding: 12px 22px;
+    }
+
+    .info {
+        width: 970px;
+    }
+
+    .phone-number {
+        height: 88px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        height: 100%;
+        background: none;
+    }
+
+    .header-wrap {
+        width: 750px;
+    }
+
+    .header-info {
+        height: 465px;
+        margin: 0;
+    }
+
+    .location {
+        width: 255px;
+        position: relative;
+        left: 34%;
+        padding-left: 0;
+    }
+
+    .bell {
+        width: 325px;
+        position: relative;
+        top: 135px;
+        right: 5%;
+    }
+
+    .heading-wrap {
+        position: static;
+        margin: 0
+    }
+
+    .header-heading {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .list-nav {
+        width: 400px;
+        margin: 0 auto 30px;
+    }
+
+    .splash-screen {
+        padding: 0 8px 15px 8px;
+    }
+
+    .splash-screen p {
+        width: 95.7%;
+        bottom: 15px;
+    }
+
+    .info {
+        width: 768px;
+    }
+
+    .footer-wrap {
+        height: 100%;
+    }
+
+    .footer-location {
+        width: 240px;
+        position: relative;
+        left: 34%;
+    }
+
+    .footer-bell {
+        width: 280px;
+        position: relative;
+        top: 110px;
+    }
+
+    .footer-nav-wrap {
+        margin-top: 130px;
+        margin-bottom: 30px;
+    }
+
+    .footer-nav {
+        line-height: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-wrap {
+        width: 320px;
+    }
+
+    .logo p {
+        margin-bottom: 0;
+    }
+
+    .location {
+        left: 10%;
+    }
+
+    .bell {
+        width: 309px;
+        right: 0;
+        top: 4px;
+    }
+
+    .call a {
+        font-size: 30px;
+    }
+
+    .call button {
+        padding: 12px 15px;
+    }
+
+    .header-heading {
+        margin-top: 30px;
+    }
+
+    .header-heading h1 {
+        font-size: 32px;
+    }
+
+    .list-nav {
+        max-width: 320px;
+    }
+
+    .splash-screen-wrap {
+        max-width: 320px;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+
+    .splash-screen p {
+        width: 94.7%;
+    }
+
+    .info {
+        max-width: 320px;
+        padding: 0 7px;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+
+    .info h3 {
+        text-align: center;
+        font-size: 19px;
+    }
+
+    .info-list {
+        padding-left: 0;
+    }
+
+    .footer-location {
+        margin: 12px auto;
+        left: 0;
+    }
+
+    .footer-bell {
+        margin: 0 auto;
+        top: 30px;
+    }
+
+    .footer-nav-wrap {
+        margin-top: 55px;
+    }
+}
 
 
 
