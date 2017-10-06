@@ -107,6 +107,7 @@ body {
 .location-adress {
     float: right;
     margin-top: 35px;
+    margin-left: 15px;
 }
 
 .location-adress span {
@@ -115,7 +116,6 @@ body {
     width: 155px;
     font: 21px "OpenSans-Light";
     color: #000;
-    margin-left: 15px;
 }
 
 .bell {
@@ -166,7 +166,7 @@ body {
 }
 
 .main-info {
-    margin-top: 35px;
+    margin-top: 30px;
     border-bottom: 13px solid #000;
 }
 
@@ -215,6 +215,10 @@ body {
     margin-left: 18px;
 }
 
+.splash-screen-wrap {
+    width: 61.666667%;
+}
+
 .splash-screen {
     text-align: center;
     display: inline-block;
@@ -244,8 +248,8 @@ body {
 
 .splash-screen p {
     text-decoration: none;
-    width: 97.3%;
-    font: 21px "OpenSansCondensed";
+    width: 97.6%;
+    font: 20px "OpenSansCondensed";
     color: #fff;
     background: rgba(0,0,0, 0.7);
     position: absolute;
@@ -270,29 +274,8 @@ body {
     padding: 0 15px;
 }
 
-.heading__square {
-    display: inline-block;
-    width: 26px;
-    height: 26px;
-    background: url("../img/sprite.png") 0 -361px;
-}
-
-.heading h2 {
-    display: inline-block;
-    text-transform: uppercase;
-    font: 30px "OpenSans-Bold";
-    color: #000;
-    margin: 0 15px 40px;
-}
-
-.main-text {
-    margin-bottom: 60px;
-}
-
-.main-text p {
-    font: 18px "OpenSans-Light";
-    color: #666;
-    margin-bottom: 40px;
+.info-wrap {
+    width: 100%;
 }
 
 .info h3 {
@@ -324,6 +307,31 @@ body {
     margin-right: 10px;
 }
 
+.heading__square {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url("../img/sprite.png") 0 -361px;
+}
+
+.heading h2 {
+    display: inline-block;
+    text-transform: uppercase;
+    font: 30px "OpenSans-Bold";
+    color: #000;
+    margin: 0 15px 40px;
+}
+
+.main-text {
+    margin-bottom: 60px;
+}
+
+.main-text p {
+    font: 18px "OpenSans-Light";
+    color: #666;
+    margin-bottom: 40px;
+}
+
 .main-text p span {
     font-weight: bold;
 }
@@ -343,7 +351,8 @@ body {
 }
 
 .footer-wrap {
-    height: 100px;
+    height: 100%;
+    padding-bottom: 10px;
 }
 
 .footer-location, .footer-bell {
@@ -355,7 +364,7 @@ body {
 }
 
 .footer-bell {
-    margin-top: 5px;
+    margin-top: 10px;
     height: 88px;
 }
 
@@ -437,12 +446,16 @@ body {
 
 @media (max-width: 1199px) {
     .header {
-        background: url(../img/one-bridge.png) bottom center no-repeat;
+        background: url(../img/one-bridge.png) 52% bottom no-repeat;
         height: 450px;
     }
 
     .header-wrap {
         width: 970px;
+    }
+
+    .call {
+        margin-left: 10px;
     }
 
     .call a {
@@ -463,6 +476,7 @@ body {
 }
 
 @media (max-width: 991px) {
+
     .header {
         height: 100%;
         background: none;
@@ -472,160 +486,196 @@ body {
         width: 750px;
     }
 
-    .header-info {
-        height: 465px;
-        margin: 0;
-    }
-
-    .location {
-        width: 255px;
-        position: relative;
-        left: 34%;
-        padding-left: 0;
-    }
-
-    .bell {
-        width: 325px;
-        position: relative;
-        top: 135px;
-        right: 5%;
-    }
-
     .heading-wrap {
         position: static;
-        margin: 0
+        margin-top: 30px;
+    }
+
+    .header-info-contacts {
+        margin-top: 10px;
     }
 
     .header-heading {
         text-align: center;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .list-nav {
-        width: 400px;
-        margin: 0 auto 30px;
-    }
-
-    .splash-screen {
-        padding: 0 8px 15px 8px;
-    }
-
-    .splash-screen p {
-        width: 95.7%;
-        bottom: 15px;
-    }
-
-    .info {
-        width: 768px;
-    }
-
-    .footer-wrap {
-        height: 100%;
-    }
-
-    .footer-location {
-        width: 240px;
-        position: relative;
-        left: 34%;
-    }
-
-    .footer-bell {
-        width: 280px;
-        position: relative;
-        top: 110px;
-    }
-
-    .footer-nav-wrap {
-        margin-top: 130px;
         margin-bottom: 30px;
     }
 
-    .footer-nav {
-        line-height: 0;
+    .splash-screen-wrap {
+        width: 100%;
+    }
+
+    .splash-screen p {
+        width: 97.1%;
+        font-size: 19px;
+    }
+
+    .footer-bell {
+        margin-top: 10px;
+    }
+
+    .info {
+        width: 750px;
+    }
+
+    .info-wrap {
+        padding: 0;
+    }
+
+    .info h3 {
+        text-align: center;
     }
 }
 
 @media (max-width: 767px) {
+
+    .header-wrap {
+        width: 425px;
+    }
+
+    .header-info {
+        height: 100%;
+    }
+
+    .header-info-contacts {
+        margin-top: 0;
+    }
+
+    .bell {
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .location {
+        width: 255px;
+        padding-left: 15px;
+    }
+
+    .heading-wrap {
+        width: 425px;
+    }
+
+    .header-heading h1 {
+        font-size: 42px;
+    }
+
+    .splash-screen-wrap {
+        width: 61.666667%;
+    }
+
+    .info {
+        width: 425px;
+    }
+
+    .footer-bell {
+        margin-top: 35px;
+    }
+
+}
+
+
+@media (max-width: 717px) {
+
+    .splash-screen {
+        width: 100%;
+    }
+
+    /*.splash-screen p {
+        width: 98.5%;
+    }*/
+
+}
+
+
+/*@media (max-width: 661px) {
+
+    .splash-screen p {
+        width: 98.4%;
+    }
+
+}*/
+
+
+@media (max-width: 425px) {
+
     .header-wrap {
         width: 320px;
     }
 
-    .logo p {
-        margin-bottom: 0;
-    }
-
-    .location {
-        left: 10%;
-    }
-
-    .bell {
-        width: 309px;
-        right: 0;
-        top: 4px;
-    }
-
-    .call a {
+    .header-heading h1 {
         font-size: 30px;
     }
 
-    .call button {
-        padding: 12px 15px;
-    }
-
-    .header-heading {
-        margin-top: 30px;
-    }
-
-    .header-heading h1 {
-        font-size: 32px;
+    .splash-screen p {
+        width: 97.4%;
     }
 
     .list-nav {
-        max-width: 320px;
+        width: 320px;
+        padding-left: 0;
     }
 
     .splash-screen-wrap {
-        max-width: 320px;
-        margin: 0 auto;
-        padding-right: 0;
+        width: 320px;
     }
 
-    .splash-screen p {
-        width: 94.7%;
+    .splash-screen {
+        width: 95%;
+    }
+
+    .item-nav a {
+        font-size: 20px;
     }
 
     .info {
-        max-width: 320px;
-        padding: 0 7px;
+        width: 100%;
     }
 
     .heading h2 {
         font-size: 20px;
     }
 
-    .info h3 {
-        text-align: center;
-        font-size: 19px;
+    .location {
+        margin-left: 40px;
     }
 
-    .info-list {
-        padding-left: 0;
+    .bell {
+        width: 100%;
+        margin-left: 20px;
+    }
+
+    .header-heading {
+        max-width: 320px;
     }
 
     .footer-location {
-        margin: 12px auto;
-        left: 0;
+        width: 210px;
+        margin-left: 25.5%;
     }
 
     .footer-bell {
-        margin: 0 auto;
-        top: 30px;
+        width: 277px;
+        margin-left: 12.5%;
     }
 
-    .footer-nav-wrap {
-        margin-top: 55px;
+    .footer-nav {
+        margin-top: 20px;
+    }
+
+    .footer-nav a {
+        display: block;
+    }
+
+    .footer-nav span {
+        display: none;
     }
 }
+
+
+
 
 
 
