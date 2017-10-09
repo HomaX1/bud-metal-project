@@ -165,11 +165,15 @@ body {
     padding-right: 0;
 }
 
-.list-nav li {
+.list-nav ul {
+    padding: 0;
+}
+
+.list-nav ul li {
     list-style-type: none;
 }
 
-.list-nav li::before {
+.list-nav ul li::before {
     display: inline-block;
     width: 12px;
     height: 17px;
@@ -177,11 +181,11 @@ body {
     background: url("../img/sprite.png") 0 -272px no-repeat;
 }
 
-.list-nav li:hover.item-nav::before, .list-nav li:active.item-nav::before {
+.list-nav ul li:hover.item-nav::before, .list-nav ul li:active.item-nav::before {
     background: url("../img/sprite.png") 0 -323px no-repeat;
 }
 
-.list-nav li:hover.item-nav a, .list-nav li:active.item-nav a {
+.list-nav ul li:hover.item-nav a, .list-nav ul li:active.item-nav a {
     color: #000;
     border-bottom: 1px dotted #000;
 }
@@ -206,8 +210,9 @@ body {
     margin-left: 18px;
 }
 
-.splash-screen-wrap {
-    width: 61.666667%;
+.splash-screen-wrap .row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .splash-screen {
@@ -222,8 +227,8 @@ body {
 }
 
 .splash-screen__background {
-    width: 97.5%;
-    height: 96.5%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     transition: background 0.2s;
 }
@@ -239,7 +244,7 @@ body {
 
 .splash-screen p {
     text-decoration: none;
-    width: 97.6%;
+    width: 100%;
     font: 20px "OpenSansCondensed";
     color: #fff;
     background: rgba(0,0,0, 0.7);
@@ -260,13 +265,11 @@ body {
 }
 
 .info {
-    width: 1170px;
-    margin: 60px auto 0;
-    padding: 0 15px;
+    margin-top: 40px;
 }
 
-.info-wrap {
-    width: 100%;
+.info .row {
+    padding: 0 15px;
 }
 
 .info h3 {
@@ -347,16 +350,7 @@ body {
 }
 
 .footer-location, .footer-bell {
-    overflow: hidden;
-}
-
-.footer-location {
     margin-top: 12px;
-}
-
-.footer-bell {
-    margin-top: 10px;
-    height: 88px;
 }
 
 .footer-location__icon {
@@ -364,18 +358,13 @@ body {
     width: 50px;
     height: 75px;
     background: url("../img/sprite.png") -2px -447px;
-    float: left;
     margin-right: 18px;
 }
 
 .footer-location-adress {
-    float: left;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 82px;
-    margin: auto;
-    height: 66px;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
 }
 
 .footer-location-adress span {
@@ -389,18 +378,13 @@ body {
     width: 36px;
     height: 88px;
     background: url("../img/sprite.png") -7px -539px;
-    float: left;
     margin-right: 18px;
 }
 
 .phone-number {
-    float: left;
-    position: absolute;
-    left: 66px;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    height: 66px;
+    display: inline-block;
+    position: relative;
+    bottom: 15px;
 }
 
 .footer-bell-tel {
@@ -452,18 +436,9 @@ body {
     .call button {
         padding: 12px 22px;
     }
-
-    .info {
-        width: 970px;
-    }
-
-    .phone-number {
-        height: 88px;
-    }
 }
 
 @media (max-width: 991px) {
-
     .header {
         height: 100%;
         background: none;
@@ -475,32 +450,19 @@ body {
 
     .header-heading {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .list-nav {
         margin-bottom: 30px;
     }
 
-    .splash-screen-wrap {
-        width: 100%;
-    }
-
     .splash-screen p {
-        width: 97.1%;
         font-size: 19px;
     }
 
     .footer-bell {
         margin-top: 10px;
-    }
-
-    .info {
-        width: 750px;
-    }
-
-    .info-wrap {
-        padding: 0;
     }
 
     .info h3 {
@@ -509,7 +471,6 @@ body {
 }
 
 @media (max-width: 767px) {
-
     .header-info {
         height: 100%;
     }
@@ -545,50 +506,45 @@ body {
         font-size: 42px;
     }
 
-    .splash-screen-wrap {
-        width: 61.666667%;
+    .list-nav {
+        display: flex;
+        justify-content: space-around;
     }
 
-    .info {
-        width: 425px;
+    .footer-location {
+        text-align: center;
     }
 
     .footer-bell {
+        text-align: center;
         margin-top: 35px;
     }
 
+    .footer-location-adress, .phone-number {
+        text-align: left;
+    }
+}
+
+
+@media (max-width: 540px) {
+    .splash-screen {
+        width: 100%;
+        padding-left: 0;
+    }
 }
 
 
 @media (max-width: 425px) {
-
     .header-heading h1 {
         font-size: 30px;
     }
 
-    .splash-screen p {
-        width: 97.4%;
-    }
-
-    .list-nav {
-        width: 320px;
+    .list-nav ul {
         padding-left: 0;
-    }
-
-    .splash-screen-wrap {
-        width: 320px;
-    }
-
-    .splash-screen {
-        width: 95%;
     }
 
     .item-nav a {
         font-size: 20px;
-    }
-
-    .info {
-        width: 100%;
     }
 
     .heading h2 {
@@ -599,17 +555,7 @@ body {
         max-width: 320px;
     }
 
-    .footer-location {
-        width: 210px;
-        margin-left: 25.5%;
-    }
-
-    .footer-bell {
-        width: 277px;
-        margin-left: 12.5%;
-    }
-
-    .footer-nav {
+    .footer-nav-wrap {
         margin-top: 20px;
     }
 
