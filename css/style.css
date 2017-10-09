@@ -216,10 +216,14 @@ body {
 }
 
 .splash-screen {
+    display: block;
     text-align: center;
-    display: inline-block;
-    padding: 0 0 7px 7px;
     position: relative;
+}
+
+.splash-screen-padding {
+    padding: 0 0 7px 7px;
+    overflow: hidden;
 }
 
 .splash-screen img {
@@ -231,6 +235,8 @@ body {
     height: 100%;
     position: absolute;
     transition: background 0.2s;
+    top: 0;
+    left: 0;
 }
 
 .splash-screen:hover .splash-screen__background, .splash-screen:active .splash-screen__background{
@@ -250,7 +256,8 @@ body {
     background: rgba(0,0,0, 0.7);
     position: absolute;
     z-index: 2;
-    bottom: 7px;
+    bottom: 0;
+    left: 0;
     margin: 0;
     padding-bottom: 5px;
     transition: background 0.2s, bottom 0.2s;
@@ -419,6 +426,18 @@ body {
 }
 
 
+@media (min-width: 1200px) {
+    .splash-screen-padding:nth-child(3n + 1) {
+        clear: left;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .splash-screen-padding:nth-child(2n + 1) {
+        clear: left;
+    }
+}
+
 @media (max-width: 1199px) {
     .header {
         background: url(../img/one-bridge.png) 52% bottom no-repeat;
@@ -435,6 +454,12 @@ body {
 
     .call button {
         padding: 12px 22px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .splash-screen-padding:nth-child(3n + 1) {
+        clear: left;
     }
 }
 
@@ -467,6 +492,12 @@ body {
 
     .info h3 {
         text-align: center;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 541px) {
+    .splash-screen-padding:nth-child(2n + 1) {
+        clear: left;
     }
 }
 
@@ -525,14 +556,12 @@ body {
     }
 }
 
-
 @media (max-width: 540px) {
-    .splash-screen {
+    .splash-screen-padding {
         width: 100%;
         padding-left: 0;
     }
 }
-
 
 @media (max-width: 425px) {
     .header-heading h1 {

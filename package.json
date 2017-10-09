@@ -2,13 +2,10 @@
   "name": "budmetal",
   "version": "0.1.0",
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "http-server": "^0.10.0"
   },
   "scripts": {
-    "serve": "lite-server -c=bs-config.json",
-    "start": "npm run serve"
-  },
-  "devDependencies": {
-    "lite-server": "^2.3.0"
+    "start": "http-server -a localhost -p 8000 -c-1 ./"
   }
 }
