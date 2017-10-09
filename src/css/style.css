@@ -1,37 +1,37 @@
 @font-face {
     font-family: 'Cuprum';
-    src: url('/fonts/cuprum/Cuprum-Bold.eot');
-    src: url('/fonts/cuprum/Cuprum-Bold.eot?iefix') format('eot'),
-    url('/fonts/cuprum/Cuprum-Bold.woff') format('woff'),
-    url('/fonts/cuprum/Cuprum-Bold.ttf') format('truetype'),
-    url('/fonts/cuprum/Cuprum-Bold.svg#webfont') format('svg');
+    src: url('../fonts/cuprum/Cuprum-Bold.eot');
+    src: url('../fonts/cuprum/Cuprum-Bold.eot?iefix') format('eot'),
+    url('../fonts/cuprum/Cuprum-Bold.woff') format('woff'),
+    url('../fonts/cuprum/Cuprum-Bold.ttf') format('truetype'),
+    url('../fonts/cuprum/Cuprum-Bold.svg#webfont') format('svg');
 }
 
 @font-face {
     font-family: 'OpenSans-Bold';
-    src: url('/fonts/openSansBold/OpenSans-Bold.eot');
-    src: url('/fonts/openSansBold/OpenSans-Bold.eot?iefix') format('eot'),
-    url('/fonts/openSansBold/OpenSans-Bold.woff') format('woff'),
-    url('/fonts/openSansBold/OpenSans-Bold.ttf') format('truetype'),
-    url('/fonts/openSansBold/OpenSans-Bold.svg#webfont') format('svg');
+    src: url('../fonts/openSansBold/OpenSans-Bold.eot');
+    src: url('../fonts/openSansBold/OpenSans-Bold.eot?iefix') format('eot'),
+    url('../fonts/openSansBold/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/openSansBold/OpenSans-Bold.ttf') format('truetype'),
+    url('../fonts/openSansBold/OpenSans-Bold.svg#webfont') format('svg');
 }
 
 @font-face {
     font-family: 'OpenSansCondensed';
-    src: url('/fonts/openSansCondensed/OpenSansCondensed-Light.eot');
-    src: url('/fonts/openSansCondensed/OpenSansCondensed-Light.eot?iefix') format('eot'),
-    url('/fonts/openSansCondensed/OpenSansCondensed-Light.woff') format('woff'),
-    url('/fonts/openSansCondensed/OpenSansCondensed-Light.ttf') format('truetype'),
-    url('/fonts/openSansCondensed/OpenSansCondensed-Light.svg#webfont') format('svg');
+    src: url('../fonts/openSansCondensed/OpenSansCondensed-Light.eot');
+    src: url('../fonts/openSansCondensed/OpenSansCondensed-Light.eot?iefix') format('eot'),
+    url('../fonts/openSansCondensed/OpenSansCondensed-Light.woff') format('woff'),
+    url('../fonts/openSansCondensed/OpenSansCondensed-Light.ttf') format('truetype'),
+    url('../fonts/openSansCondensed/OpenSansCondensed-Light.svg#webfont') format('svg');
 }
 
 @font-face {
     font-family: 'OpenSans-Light';
-    src: url('/fonts/openSansLight/OpenSans-Light.eot');
-    src: url('/fonts/openSansLight/OpenSans-Light.eot?iefix') format('eot'),
-    url('/fonts/openSansLight/OpenSans-Light.woff') format('woff'),
-    url('/fonts/openSansLight/OpenSans-Light.ttf') format('truetype'),
-    url('/fonts/openSansLight/OpenSans-Light.svg#webfont') format('svg');
+    src: url('../fonts/openSansLight/OpenSans-Light.eot');
+    src: url('../fonts/openSansLight/OpenSans-Light.eot?iefix') format('eot'),
+    url('../fonts/openSansLight/OpenSans-Light.woff') format('woff'),
+    url('../fonts/openSansLight/OpenSans-Light.ttf') format('truetype'),
+    url('../fonts/openSansLight/OpenSans-Light.svg#webfont') format('svg');
 }
 
 
@@ -46,18 +46,9 @@ body {
     height: 423px;
     background: url("../img/bridges.png") top center no-repeat;
     padding-top: 10px;
-    position: relative;
-}
-
-.header-wrap {
-    width: 1170px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.heading-wrap {
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .header-heading h1 {
@@ -450,10 +441,6 @@ body {
         height: 450px;
     }
 
-    .header-wrap {
-        width: 970px;
-    }
-
     .call {
         margin-left: 10px;
     }
@@ -480,15 +467,6 @@ body {
     .header {
         height: 100%;
         background: none;
-    }
-
-    .header-wrap {
-        width: 750px;
-    }
-
-    .heading-wrap {
-        position: static;
-        margin-top: 30px;
     }
 
     .header-info-contacts {
@@ -532,19 +510,20 @@ body {
 
 @media (max-width: 767px) {
 
-    .header-wrap {
-        width: 425px;
-    }
-
     .header-info {
         height: 100%;
     }
 
     .header-info-contacts {
-        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
     }
 
     .bell {
+        width: 260px;
         padding: 0;
         margin-top: 15px;
     }
@@ -554,8 +533,12 @@ body {
         padding-left: 15px;
     }
 
-    .heading-wrap {
-        width: 425px;
+    .call a {
+        font-size: 29px;
+    }
+
+    .call button {
+        padding: 12px 10px;
     }
 
     .header-heading h1 {
@@ -577,33 +560,7 @@ body {
 }
 
 
-@media (max-width: 717px) {
-
-    .splash-screen {
-        width: 100%;
-    }
-
-    /*.splash-screen p {
-        width: 98.5%;
-    }*/
-
-}
-
-
-/*@media (max-width: 661px) {
-
-    .splash-screen p {
-        width: 98.4%;
-    }
-
-}*/
-
-
 @media (max-width: 425px) {
-
-    .header-wrap {
-        width: 320px;
-    }
 
     .header-heading h1 {
         font-size: 30px;
@@ -636,15 +593,6 @@ body {
 
     .heading h2 {
         font-size: 20px;
-    }
-
-    .location {
-        margin-left: 40px;
-    }
-
-    .bell {
-        width: 100%;
-        margin-left: 20px;
     }
 
     .header-heading {
